@@ -1,0 +1,164 @@
+1.<jsp:UseBean> default scope
+ans: page
+
+2.which of the following are true
+	a.vector is list type of collection
+	b.arraylist is set type of collection
+	c.iterator is set type of collection
+	d.Hashmap is list type of collection
+ans: a
+
+3.which package contains all classes and interface of jdbc
+ans: java.sql
+4.which package uses for database 
+ans: java.sql
+5.which contains JDBC API
+ans: java.sql
+
+
+6.order of access modifiers from least scope to high
+ans: private,protected,public(as per given options)
+correct arrangment is - private,default,protected,public(this is option was not there in options)
+
+
+7.Document comments
+ans: /**comment...*/
+
+
+8.JSP expression
+ans: <%=A java expression>
+
+
+9.Thread priority range
+ans: 1 - 10
+
+
+10.prepare  syntaxes for directives(page,taglib,include)
+
+11.Parameteraised query - Preparedstatement
+
+12.Stored procedure - Callablestatement
+
+13.which are mandatory for filter
+ans: <filter> and <filter-mappimg>
+
+14.which are not servlet advantages
+	a.java potability
+	b.maximum use of system resources
+	c.easier to code
+	d.it doesn't have GUI
+ans: check it once
+
+
+15.which thread runs at background and supports running threads
+ans: deamon
+
+
+16.log messages retrieved by using
+ans: servletContext
+
+
+17.questions on declaration tag
+
+
+18.after loading,web server executes which method before serving first request
+ans: init()
+
+
+19.in JSP we can overload both init() and destroy() methods.
+
+
+20.array declarations
+
+
+21.class A
+{
+int i=9;
+public static void main(String args[])
+{
+int i=10;
+A a=new A();
+sop(a.i);
+}
+}
+
+ans: 9
+
+
+
+22.class A 
+{
+int i;
+A(int i)
+{
+this.i=i;
+}
+psvm(String args[])
+{
+A a=new A();
+sop(a.i);
+}
+}
+ans:Compiler error
+
+
+
+23.abstract class C
+{
+public C()
+{
+sop("1");
+}
+}
+class C1 extends C
+{
+C1()
+{
+sop("2");
+}
+}
+class C2 extends C1
+{
+C2()
+{
+sop("3");
+}
+}
+public class test
+{
+public static void main(String args[])
+{
+sop(new C2());
+}
+}
+ans: 123
+
+
+
+
+24.interface i
+{
+int a(); //line3
+void b(); //line4
+protected void c(); //line5
+}
+
+ans:error at line 5
+
+
+
+25.class A
+{
+psvm()
+{
+boolean b=true;
+if(b=true)
+{sop("A")}
+elseif(b)
+{sop("B")};
+else
+sop("C");
+}
+}
+
+ans: C

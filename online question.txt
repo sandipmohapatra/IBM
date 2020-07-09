@@ -1,0 +1,281 @@
+
+Ques 1 : JSP used for ?
+(A) Server Side Programming
+(B) Client Side Programming
+(C) Both
+(D) None of These
+Answer : Server Side Programming
+
+Ques 2 : Consider the following code and select the correct statement about it from the options below.
+        <%! int aNum = 5%>
+        The value of aNum is <%= aNum%>
+   
+(A) It will not flag any compile-time or runtime errors and will not print anything to the output.
+(B) It will print "The value of aNum is 5" to the output.
+(C) It will flag a compile-time error because of an incorrect declaration.
+(D) It will throw a runtime exception while executing the expression.
+Answer : It will not flag any compile-time or runtime errors and will It will not flag any compile-time or runtime errors and will not print anything to the output.
+Description : <%! int aNum = 5;%> (semicolun missing after 5)
+
+Ques 3 : Which of the following tags can you use to print the value of an expression to the output stream?
+(A) <%@ %>
+(B) <%! %>
+(C) <% %>
+(D) <%= %>
+Answer : <%= %>
+
+Ques 4 : The following declaration is valid or not?
+<%@ page buffer="8kb", session="false" %>
+(A) Valid
+(B) Invalid
+Answer : Invalid
+Description : A comma is not allowed between attributes.
+
+Ques 5 : The following declaration is valid or not?
+<%@ page import="org.pskills.dbconnection.* " %>
+<%@ page session="true" %>
+<%@ page import="java.text.*" %>
+(A) Valid
+(B) Invalid
+Answer : Valid
+
+Description : The order and placement of page direc tives do not matter. The import attribute can occur multiple times.
+Ques 6 : The following declaration is valid or not?
+<%@ page bgcolor="navy" %>
+(A) Valid
+(B) Invalid
+Answer : Invalid
+Description : bgcolor is not a valid attribute.
+
+Ques 7 : The following declaration is valid or not?
+<%@ page buffer="true" %>
+(A) Valid
+(B) Invalid
+Answer : Invalid
+Description : true is not a valid value for the buffer attribute. The value must specify the size of the buffer in kb.
+
+Ques 8 : The following declaration is valid or not?
+<%@ Page language='java' %>
+(A) Valid
+(B) Invalid
+Answer : Invalid
+Description : Directive names, attributes, and values are case sensitive. We must use page and not Page.
+
+Ques 9 : Which of the following methods is defined by the JSP engine?
+(A) jspInit()
+(B) _jspService()
+(C) _jspService(HttpServletRequest, HttpServletResponse)
+(D) jspDestroy()
+Answer : _jspService(HttpServletRequest, HttpServletResponse)
+
+Ques 10 : What will be the output of the following code?
+<% int x = 5; %>
+<%! int x = 10; %>
+<%! int y = 50; %>
+The value of b multiplied by a is <%= y * x %>
+(A) The code will not compile
+(B) 30
+(C) 250
+(D) 500
+Answer : 250
+Description : because the x=5 is local variable. 
+
+
+Ques 11 : What will be the output of the following code?
+   <% x = 30; %>
+   <% int x = 200; %>
+   <%! int x = 300; %>
+   x = <%= x %>, <%= this.x %>
+ 
+ 
+(A) x = 200, 30
+(B) x = 300, 30
+(C) x = 30, 30
+(D) x = 200, 200
+Answer : x = 200, 30
+
+
+Ques 12 : Which of the following exceptions may be thrown by the _jspService() method? 
+(A) javax.servlet.jsp.JSPException and java.io.IOException
+(B) javax.servlet.jsp.JSPException
+(C) javax.servlet.ServletException and javax.servlet.jsp.JSPException
+(D) javax.servlet.ServletException and java.io.IOException
+Answer : javax.servlet.ServletException and java.io.IOException
+
+
+Ques 13 : Which are valid and invalid ?
+a  <%=myObj.m1(); %>
+b  <% int x=4, y=5; %> 
+c  <%=x=y%>
+d  <% myObj.m1(); %>
+(A) a valid, b,c,and d are invalid
+(B) a invalid, b,c adn d are valid
+(C) all valid
+(D) all invalid
+Answer : a invalid, b,c adn d are valid
+
+
+Ques 14 : What will be the output of following code?
+<%@ page language='java' %>
+<%
+int x = 0;
+int incr()
+ { 
+	return ++x;
+ }
+%>
+The value of x is <%=incr()%>
+(A) The value of x is 0
+(B) The value of x is 1
+(C) The value of x is 2
+(D) Error in Code.
+Answer : Error in Code.
+Description : We cannot define methods in a scriptlet
+
+
+Ques 15 : What will be the output of following code?
+<% int x = 3; %>
+<%! int x = 5; %>
+<%! int y = 6; %>
+The sum of x and y is <%=x+y%>
+(A) The sum of x and y is 11
+(B) The sum of x and y is 6
+(C) The sum of x and y is 9
+(D) The sum of x and y is 3
+Answer : The sum of x and y is 9
+
+
+Ques 16 : How much implicit object in JSP?
+(A) 7
+(B) 8
+(C) 9
+(D) None of These.
+Answer : 9
+
+
+Ques 17 : Which is not a implicit object in JSP?
+a) pageContext
+b) pageConfig
+c) config
+d) context
+e) page
+f) exception
+g) Exception
+(A) b,d and f
+(B) b,d and g
+(C) a,c and g
+(D) a,b and e
+Answer : b,d and f
+
+
+Ques 18 : What is the term for determining whether a user has access to a particular resource?
+(A) Authorization
+(B) Authentication
+(C) Confidentiality
+(D) Secrecy
+Answer : Authorization
+
+
+Ques 19 : Which is not a valid syntax in JSP?
+(A) request.authenticate(response)
+(B) request.getAttributes("email")
+(C) request.getCookies()
+(D) None of These
+Answer : request.getAttributes("email")
+Description : It should be request.getAttribute("email"); but not getAttributes
+
+
+Ques 20 : What will be the output of the following code? (Select one)
+<html>
+<body>
+The value is <%=""%>
+</body>
+</html>
+(A) Compilation error
+(B) Runtime error
+(C) The value is
+(D) The value is null
+Answer : The value is 
+
+
+
+
+
+
+Object 	Description for implicit object
+
+
+1) request 	This is the HttpServletRequest object associated with the request.
+
+2) response	This is the HttpServletResponse object associated with the response to the client.
+
+3) out	        This is the PrintWriter object used to send output to the client.
+
+4) session  	This is the HttpSession object associated with the request.
+
+5) application	This is the ServletContext object associated with application context.
+
+6) config	        This is the ServletConfig object associated with the page.
+
+7) pageContext	This encapsulates use of server-specific features like higher performance JspWriters.
+
+8) page	        This is simply a synonym for this, and is used to call the methods defined by the translated servlet class.
+
+9) Exception	The Exception object allows the exception data to be accessed by designated JSP.
+
+
+
+
+Directive Description jsp 
+
+<%@ page ... %>	Defines page-dependent attributes, such as scripting language, error page, and buffering requirements.
+<%@ include ... %>	Includes a file during the translation phase.
+<%@ taglib ... %>	Declares a tag library, containing custom actions, used in the page
+
+
+Attributes of jsp:
+
+Following is the list of attributes associated with page directive:
+
+Attribute 	Purpose
+buffer	        Specifies a buffering model for the output stream.
+autoFlush	Controls the behavior of the servlet output buffer.
+contentType	Defines the character encoding scheme.
+errorPage	Defines the URL of another JSP that reports on Java unchecked runtime exceptions.
+isErrorPage	Indicates if this JSP page is a URL specified by another JSP page's errorPage attribute.
+extends	        Specifies a superclass that the generated servlet must extend
+import	        Specifies a list of packages or classes for use in the JSP as the Java import statement does for Java classes.
+info	        Defines a string that can be accessed with the servlet's getServletInfo() method.
+isThreadSafe	Defines the threading model for the generated servlet.
+language	Defines the programming language used in the JSP page.
+session	        Specifies whether or not the JSP page participates in HTTP sessions
+isELIgnored	Specifies whether or not EL expression within the JSP page will be ignored.
+isScriptingEnabled	Determines if scripting elements are allowed for use.
+
+
+JSTL Functions:
+
+JSTL includes a number of standard functions, most of which are common string manipulation functions. Following is the syntax to include JSTL Functions library in your JSP:
+
+<%@ taglib prefix="fn" 
+           uri="http://java.sun.com/jsp/jstl/functions" %>
+
+Following is the list of JSTL Functions:
+Function	         Description
+ 
+fn:contains()	        Tests if an input string contains the specified substring.
+fn:containsIgnoreCase()	Tests if an input string contains the specified substring in a case insensitive way.
+fn:endsWith() 	        Tests if an input string ends with the specified suffix.
+fn:escapeXml() 	        Escapes characters that could be interpreted as XML markup.
+fn:indexOf()	        Returns the index withing a string of the first occurrence of a specified substring.
+fn:join() 	        Joins all elements of an array into a string.
+fn:length()             Returns the number of items in a collection, or the number of characters in a string.
+fn:replace()	        Returns a string resulting from replacing in an input string all occurrences with a given string.
+fn:split()	        Splits a string into an array of substrings.
+fn:startsWith()	        Tests if an input string starts with the specified prefix.
+fn:substring()	        Returns a subset of a string.
+fn:substringAfter()	Returns a subset of a string following a specific substring.
+fn:substringBefore()	Returns a subset of a string before a specific substring.
+fn:toLowerCase()	Converts all of the characters of a string to lower case.
+fn:toUpperCase()	Converts all of the characters of a string to upper case.
+fn:trim()	        Removes white spaces from both ends of a string. 
